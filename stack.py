@@ -25,12 +25,16 @@ class Stack:
 
     def size(self):
         return len(self.items)
+    
+def reverse_word(word):
+    stack = Stack()
+    for char in word:
+      stack.push(char)
+      reversed_word = ""
+    while not stack.is_empty():
+            reversed_word += stack.pop()
+    return reversed_word
+
 
 s = Stack()
-s.push(1)
-s.push(2)
-s.push(3)
-print(s.pop())      
-print(s.peek())     
-print(s.size())     
-print(s.is_empty()) 
+print(reverse_word("hello"))  # لازم "olleh"
